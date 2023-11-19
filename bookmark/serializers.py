@@ -16,6 +16,7 @@ class ChallengeSerializer(serializers.ModelSerializer):
 
 class LabBookmarkSerializer(serializers.ModelSerializer):
     lab = LabSerializer(read_only=True)
+
     class Meta:
         model = LabBookmark
         fields = "__all__"
@@ -23,6 +24,7 @@ class LabBookmarkSerializer(serializers.ModelSerializer):
 
 class ChallengeBookmarkSerializer(serializers.ModelSerializer):
     challenge = ChallengeSerializer(read_only=True)
+
     class Meta:
         model = ChallengeBookmark
         fields = "__all__"
