@@ -25,6 +25,7 @@ from rest_framework import permissions
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("bookmark/", include("bookmark.urls")),
 ]
 
 if settings.DEBUG:  # pragma: no cover

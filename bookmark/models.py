@@ -4,8 +4,9 @@ import uuid
 
 
 class Base(models.Model):
-    uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
-    title = models.CharField(max_length=255)
+    uuid = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True, primary_key=True
+    )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -14,14 +15,14 @@ class Base(models.Model):
 
 
 class Lab(Base):
-    pass
+    title = models.CharField(max_length=255)
 
     def __str__(self):
         return self.title
 
 
 class Challenge(Base):
-    pass
+    title = models.CharField(max_length=255)
 
     def __str__(self):
         return self.title
