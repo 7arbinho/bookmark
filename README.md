@@ -35,3 +35,14 @@ python manage.py runserver
 
 # Go to swagger documentation
 http://0.0.0.0:8000/swagger
+
+# Hints:
+token format: Bearer Token
+you can pass it as: Bearer + your_token in Authorization
+
+you can use this user for demo:
+username: ali
+password: ali@1234
+
+in this endpoint: /bookmark/bookmarks/bookmark-item/
+types are [Lab, Challenge].

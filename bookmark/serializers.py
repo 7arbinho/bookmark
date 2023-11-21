@@ -36,7 +36,7 @@ class BookMarkItemSerializer(serializers.Serializer):
 
 
 class UnBookMarkItemSerializer(serializers.Serializer):
-    uuid = serializers.UUIDField()
+    bookmark_uuid = serializers.UUIDField()
 
 
 class LabAndChallengeBookmarkSerializer(serializers.Serializer):

@@ -53,7 +53,7 @@ class UnBookMarkItemView(generics.GenericAPIView):
     def patch(self, request):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        uuid = serializer.validated_data["uuid"]
+        uuid = serializer.validated_data["bookmark_uuid"]
         try:
             lab_bookmark = LabBookmark.objects.get(uuid=uuid)
             lab_bookmark.delete()
