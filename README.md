@@ -32,3 +32,6 @@ pip install -r requirements.txt
 
 # Start the development server
 python manage.py runserver
+
+# Go to swagger documentation
+http://0.0.0.0:8000/swagger
