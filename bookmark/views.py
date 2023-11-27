@@ -4,6 +4,19 @@ from rest_framework.response import Response
 from .models import *
 from .serializers import *
 from django.shortcuts import get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CustomTokenObtainPairView(TokenObtainPairView):
+    pass
+
+
+@method_decorator(csrf_exempt, name='dispatch')
+class CustomTokenRefreshView(TokenRefreshView):
+    pass
 
 
 class LabListAPIView(generics.ListAPIView):
